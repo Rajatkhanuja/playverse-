@@ -1,0 +1,189 @@
+/* Wrapper for all game cards */
+.game-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Individual Game Card */
+.game-card {
+  position: relative;
+  width: 280px;
+  height: 380px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #1e2328;
+  border-radius: 20px;
+  box-shadow: -5px -5px 15px rgba(5, 40, 241, 0.379), 5px 5px 15px rgba(9, 165, 204, 0.35);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px;
+}
+.game-card {
+  margin: 10; /* Remove margin if you want to use gap only */
+}
+
+.game-card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover .game-card-img {
+  transform: scale(1.05);
+}
+
+.game-card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.game-title {
+  color: white;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.game-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.game-category {
+  display: inline-block;
+  background-color: #00a8e8;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 20px;
+  font-size: 1.1em; /* Adjusted for better readability on small screens */
+  margin-right: 10px; /* Reduce right margin for better spacing */
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.game-category:hover {
+  background-color: #0077b6;
+}
+
+.game-description {
+  color: #b0b0b0;
+  font-size: 0.95em;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.game-price {
+  color: #00ff88;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: rgba(0, 255, 136, 0.1);
+  border-radius: 5px;
+  padding: 5px 10px;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+/* Like and Add to Bag Buttons */
+.like-btn, .add-bag-btn {
+  background-color: #2a2f35;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.like-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.add-bag-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.like-btn i, .add-bag-btn i {
+  color: white;
+  font-size: 1.3em;
+  transition: transform 0.3s ease;
+}
+
+.like-btn:hover, .add-bag-btn:hover {
+  background-color: #00a8e8;
+  transform: scale(1.1);
+}
+
+.like-btn:hover i, .add-bag-btn:hover i {
+  transform: scale(1.2);
+}
+
+.like-btn.liked {
+  background-color: #ff4757;
+}
+
+.add-bag-btn.clicked {
+  background-color: #2ed573;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .game-card {
+    width: 100%;
+    height: auto; /* Make card height adjust automatically */
+  }
+
+  .game-card-container {
+    gap: 15px;
+  }
+
+  .game-title {
+    font-size: 1.2em; /* Adjust title size for small screens */
+  }
+
+  .game-category {
+    font-size: 0.95em; /* Adjust category size for better readability */
+    margin-right: 5px; /* Adjust margin for better spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .game-card {
+    width: 100%; /* Make card fill the screen */
+  }
+
+  .game-card-content {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .game-price {
+    font-size: 1.1em; /* Reduce price size slightly for better layout */
+  }
+
+  .like-btn, .add-bag-btn {
+    width: 40px; /* Make buttons smaller for mobile */
+    height: 40px;
+  }
+
+  .like-btn i, .add-bag-btn i {
+    font-size: 1.2em; /* Adjust icon size */
+  }
+}

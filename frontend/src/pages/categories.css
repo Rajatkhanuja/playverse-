@@ -1,0 +1,141 @@
+/* Filters Section */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 15px;
+    margin: 20px 0 30px 0;
+    padding: 0;
+    justify-content: center; /* Center the filters horizontally */
+}
+
+.filters li {
+    background-color: #1f1f1f; /* Darker background for better contrast */
+    color: #ffffff;
+    padding: 12px 30px; /* Balanced padding for better appearance */
+    transition: 0.3s ease-in-out;
+    border-radius: 12px; /* Smooth, rounded corners */
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold; /* Make text more prominent */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    letter-spacing: 1px; /* Slightly increased letter spacing */
+}
+
+.filters li:hover,
+.filters li.active {
+    background: linear-gradient(135deg, #ff7a18, #af002d); /* Gradient for hover effect */
+    box-shadow: 0px 4px 20px rgba(255, 122, 24, 0.5); /* Enhanced shadow on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* No Results Section */
+.no-results {
+    text-align: center;
+    color: #ff6666; /* Softer red color for no results */
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Game Card Styles */
+.card {
+    background-color: #282c34; /* Dark background for contrast */
+    color: #ffffff;
+    border-radius: 15px; /* Smooth corners */
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.333% - 40px); /* 3 cards per row with spacing */
+    max-width: 400px;
+    min-height: 300px; /* Consistent height */
+    margin-bottom: 30px; /* Spacing between cards */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 2 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .filters {
+        flex-direction: column; /* Stack filters vertically on small screens */
+        align-items: center; /* Center filters */
+    }
+
+    .filters li {
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+        width: 100%; /* Full width for filter items */
+    }
+}
+
+/* Search Bar */
+.search {
+    display: inline-flex;
+    gap: 15px;
+    align-items: center;
+    width: 100%; /* Full width for responsive design */
+    max-width: 400px; /* Limit the maximum width */
+    height: 55px;
+    padding: 8px 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    background-color: #2e2e2e;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+    transition: box-shadow 0.3s ease;
+}
+
+.search:hover {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6); /* Stronger shadow on hover */
+}
+
+.search input {
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    color: #ffffff;
+    width: 100%; /* Full width input */
+}
+
+.search input:focus {
+    color: #ffffff;
+}
+
+.search input::placeholder {
+    color: #b5b5b5; /* Lighter placeholder color */
+}
+
+/* Additional Media Query for Search Bar */
+@media (max-width: 480px) {
+    .search {
+        padding: 8px 15px; /* Adjust padding for smaller screens */
+        height: 45px; /* Slightly smaller height */
+    }
+
+    .search input {
+        font-size: 1rem; /* Smaller font size for input */
+    }
+}

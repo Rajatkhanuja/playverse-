@@ -1,0 +1,97 @@
+/* Game card styling for uniform size */
+.game-card {
+    width: 100%; /* Full width of the container */
+    height: 350px; /* Enough height to display content properly */
+    background-color: #34495e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease;
+    position: relative;
+    
+}
+
+.game-card img {
+    width: 100%;
+    height: 150px; /* Uniform image size */
+    object-fit: cover; /* Crop image to fit the container */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.game-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Ellipsis for long titles */
+}
+
+.game-card p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    height: 40px; /* Restrict description height */
+    overflow: hidden; /* Hide overflowing content */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+    white-space: nowrap; /* Ensure the description fits within the space */
+}
+
+.game-card button {
+    background-color: var(--second);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto; /* Keep button at the bottom */
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Ensure cards are aligned correctly */
+.row .col-sm-3 {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    margin: 20px;/* Horizontal space between cards */
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .game-card {
+        height: 300px; /* Adjust height for smaller screens */
+        margin-bottom: 15px; /* Adjust vertical space for smaller screens */
+    }
+
+    .game-card h4 {
+        font-size: 1rem; /* Smaller title font size */
+    }
+
+    .game-card p {
+        font-size: 0.8rem; /* Smaller description font size */
+        height: 30px; /* Adjust height for smaller descriptions */
+    }
+}
+
+@media (max-width: 480px) {
+    .game-card {
+        height: 250px; /* Further adjust height for very small screens */
+        margin-bottom: 10px; /* Further reduce vertical space for small screens */
+    }
+
+    .game-card h4 {
+        font-size: 0.9rem; /* Even smaller title font size */
+    }
+
+    .game-card p {
+        font-size: 0.7rem; /* Smaller description font size */
+        height: 25px; /* Adjust height for very small descriptions */
+    }
+}

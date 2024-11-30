@@ -1,0 +1,167 @@
+/* Bag Component Styles */
+.bag {
+  padding: 2rem 0;
+  color: #ffffff;
+}
+
+.bag h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #f0f0f0;
+}
+
+.bag h2 {
+  font-size: 1.8rem;
+  color: #b0b0b0;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.shopBagTable {
+  margin-top: 2rem;
+  background: brown;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: -5px -5px 15px rgb(97, 125, 25), 5px 5px 15px rgba(16, 16, 16, 0.975);
+}
+
+.shopBagTable thead {
+  background-color: rgba(245, 10, 10, 0.05);
+}
+
+.shopBagTable thead tr {
+  font-size: 1.2rem;
+}
+
+.shopBagTable thead tr th {
+  padding: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #000000; /* Changed to black */
+}
+
+.shopBagTable tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.shopBagTable tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.itemCount {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.payment {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.3rem;
+}
+
+/* Custom Checkout Button Styles */
+.payment a {
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, #f60804, #22026e);
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer; /* Make it more obvious as a clickable button */
+}
+
+.payment a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #45a049, #3d8b3d);
+}
+
+.payment a i {
+  font-size: 1.2rem;
+}
+
+/* PayPal Button Container */
+.payment div {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Media Queries for Smaller Devices */
+@media (max-width: 768px) {
+  .bag h1 {
+    font-size: 2rem;
+  }
+
+  .shopBagTable thead tr {
+    font-size: 1rem;
+  }
+
+  .itemCount, .payment {
+    font-size: 1.1rem;
+  }
+
+  .payment {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  /* PayPal Button for smaller devices */
+  .payment div {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Adjusting the bag padding for mobile */
+  .bag {
+    padding: 1rem 0; /* Less padding on smaller screens */
+  }
+
+  /* Adjusting the table for smaller screens */
+  .shopBagTable {
+    margin-top: 1rem; /* Less margin on top */
+    border-radius: 10px; /* Less radius for better appearance */
+  }
+}
+
+@media (max-width: 480px) {
+  .bag h1 {
+    font-size: 1.8rem; /* Smaller heading for very small screens */
+  }
+
+  .bag h2 {
+    font-size: 1.5rem; /* Smaller subheading for very small screens */
+  }
+
+  .shopBagTable {
+    padding: 0.5rem; /* Additional padding for smaller screens */
+  }
+
+  .payment {
+    gap: 0.5rem; /* Less gap for smaller screens */
+  }
+
+  .payment a {
+    font-size: 1rem; /* Smaller button text */
+    padding: 0.5rem 1rem; /* Smaller button padding */
+  }
+}
+/* Bag Component Styles */
+.note {
+  background-color:orangered; /* Light background for contrast */
+  color: #ffffff; /* Text color */
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center; /* Center the text */
+}

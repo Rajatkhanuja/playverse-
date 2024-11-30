@@ -1,0 +1,141 @@
+.sideMenu {
+    width: 300px; /* Fixed width for a box-like structure */
+    height: 600px; /* Fixed height */
+    padding: 10px; /* Reduced padding for more compact look */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px; /* Less border-radius for box look */
+    background: var(--bgcolor);
+    box-shadow: -5px -5px 15px rgb(19, 243, 3), 5px 5px 15px rgb(3, 7, 240);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content towards the top */
+    align-items: center; /* Center horizontally */
+    transition: 1s;
+    gap: 10px; /* Small gap between items */
+    margin-bottom: auto;
+}
+
+.sideMenu .logo {
+    font-family: 'Bauhaus 93';
+    position: relative;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    box-shadow: -5px -5px 15px rgb(249, 2, 2), 5px 5px 15px rgba(43, 3, 201, 0.975);
+    border-radius: 90px;
+    color: #ffffff;
+    font-size: 1.5em; /* Slightly smaller to reduce space */
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px; /* Add padding for better appearance */
+}
+
+.sideMenu .nav {
+    margin-top: 20px; /* Reduced top margin */
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 10px; /* Smaller gap between navigation items */
+}
+
+.sideMenu .nav li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.5s;
+    background: var(--bgcolor);
+    border-radius: 20px;
+    padding: 10px 15px; /* Reduced padding for more compact look */
+    width: 100%;
+}
+
+.sideMenu .nav li a:hover,
+.sideMenu .nav li a.active {
+    box-shadow: -5px -5px 15px rgba(230, 8, 152, 0.852), 5px 5px 15px rgba(201, 3, 33, 0.836);
+}
+
+.sideMenu .social {
+    position: absolute;
+    bottom: 900px; /* Adjusted distance from the bottom for better placement */
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 10px; /* Reduced gap between social icons */
+    transition: 0.5s;
+}
+
+.sideMenu .social li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem; /* Slightly smaller font for compactness */
+    transition: 0.3s;
+}
+
+.sideMenu .social li .share {
+    background: var(--second);
+    padding: 8px; /* Reduced padding for smaller icons */
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.sideMenu.active {
+    width: 7%; /* Narrow width when active */
+    transition: 1s;
+    overflow: hidden;
+    align-items: center;
+}
+
+.sideMenu.active .brand,
+.sideMenu.active .navName {
+    display: none; /* Hide brand and nav name when active */
+}
+
+.sideMenu.active .nav li a {
+    font-size: 1.8em; /* Larger font for active state */
+}
+
+.sideMenu.active .social {
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sideMenu {
+        width: 80%; /* Wider menu on smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .sideMenu .nav li a {
+        font-size: 1.2em; /* Slightly larger font for easier readability */
+    }
+
+    .sideMenu .logo {
+        font-size: 1.3em; /* Adjust logo size */
+    }
+}
+
+@media (max-width: 480px) {
+    .sideMenu {
+        width: 90%; /* Full width for mobile */
+    }
+
+    .sideMenu .nav li a {
+        font-size: 1em; /* Smaller font for very small screens */
+    }
+
+    .sideMenu .social li a {
+        font-size: 1rem; /* Adjust social icon size */
+    }
+}

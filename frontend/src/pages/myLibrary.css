@@ -1,0 +1,72 @@
+.library h1 {
+  font-size: 2.5rem;
+  color: #f7f4f4;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.library h2 {
+  font-size: 1.8rem;
+  color: #666;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.library .row {
+  justify-content: center;
+}
+
+.library .col-md-4 {
+  display: flex;
+  justify-content: center;
+}
+
+/* Add some space between game cards */
+.library .col-md-4.mb-4 {
+  margin-bottom: 2rem !important;
+}
+
+/* Ensure consistent card sizes */
+.library .game-card {
+  width: 100%;
+  max-width: 350px; /* Set maximum width */
+}
+
+/* Add a subtle hover effect to game cards */
+.library .game-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .library h1 {
+      font-size: 2rem; /* Smaller header on mobile */
+  }
+
+  .library h2 {
+      font-size: 1.5rem; /* Smaller subheader on mobile */
+  }
+
+  .library .col-md-4 {
+      flex: 0 0 100%; /* Take full width on mobile */
+      max-width: 100%; /* Ensure max width is 100% */
+      margin-bottom: 1.5rem; /* Space between cards */
+  }
+}
+
+@media (max-width: 480px) {
+  .library h1 {
+      font-size: 1.8rem; /* Further reduce size on very small screens */
+  }
+
+  .library h2 {
+      font-size: 1.2rem; /* Further reduce size on very small screens */
+  }
+
+  /* Optional: Adjust card hover effect for smaller screens */
+  .library .game-card:hover {
+      transform: translateY(-3px); /* Smaller effect on mobile */
+  }
+}

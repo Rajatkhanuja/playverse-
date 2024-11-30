@@ -1,0 +1,75 @@
+.add {
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  background: url('/src/assets/bgimage.jpg') no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 0 10px rgba(237, 9, 9, 0.1);
+  color: #ef6969;
+  font-size: 12px;
+  
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.list-table {
+  width: 100%;
+}
+
+.list-table-format {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  border: 1px solid #efe4e4;
+  font-size: 13px;
+  color: #fff; /* Ensure text color is white */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+}
+
+.list-table-format.title {
+  background-color: #ab1414;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.list-table-format img {
+  width: 50px;
+  height: auto;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .list-table-format {
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    gap: 5px;
+  }
+  
+  .list-table-format.title {
+    display: none;
+  }
+  
+  .list-table-format img {
+    width: 40px;
+  }
+  
+  .list-table-format > div {
+    font-size: 12px;
+  }
+}
+
+.cursor {
+  cursor: pointer;
+  color: #007bff; /* Ensure text color is visible */
+}
+
+.cursor:hover {
+  color: #ff0000;
+}

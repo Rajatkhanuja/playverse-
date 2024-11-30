@@ -1,0 +1,123 @@
+.add {
+  width: 70%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/src/assets/bgimage.jpg') no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border-radius: 15px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.add-img-upload p,
+.add-product-name p,
+.add-game-description p,
+.add-category-price p {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #29df15;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.add-category-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.add-category-price > div {
+  flex: 1;
+}
+
+.add-category-price p {
+  margin-bottom: 8px;
+}
+
+.add-img-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-img-upload img {
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.add-img-upload img:hover {
+  transform: scale(1.05);
+}
+
+.add-product-name input,
+.add-game-description textarea,
+.add-category-price input,
+.add-category-price select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(65, 73, 152, 0.66);
+  color:  #12da1f;
+  font-size: 1.5em;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-product-name input:focus,
+.add-game-description textarea:focus,
+.add-category-price input:focus,
+.add-category-price select:focus {
+  background-color: rgba(27, 26, 26, 0.25);
+  box-shadow: 0 0 0 2px rgba(8, 243, 39, 0.95);
+  outline: none;
+}
+
+.add-category-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.add-btn {
+  margin-top: 30px;
+  padding: 12px 25px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.add-btn:active {
+  transform: translateY(0);
+}
+
+::placeholder {
+  color: rgba(38, 6, 243, 0.7);
+  font-size: 1.3em;
+}

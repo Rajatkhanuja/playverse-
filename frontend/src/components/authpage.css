@@ -1,0 +1,98 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+   /* Prevent scrolling */
+}
+
+.auth-container {
+  position: fixed; /* Fix the container in place */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Ensure content doesn't overflow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Ensure it stays above other content */
+}
+
+.auth-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure video covers the container */
+  z-index: -1; /* Place the video behind other content */
+}
+
+.auth-form {
+  position: relative; /* Ensure the form is above the video */
+  background: linear-gradient(135deg, #f60804, #22026e); /* Semi-transparent by default */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  opacity: 0.9; /* Slightly opaque by default */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.auth-form:hover {
+  opacity: 1; /* Fully opaque on hover */
+}
+
+.auth-form h2 {
+  margin-bottom: 1.5rem;
+  color: #0bf713;
+  font-size: 2rem;
+}
+
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-form input {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.auth-form button {
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #f60804, #f004a9);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.auth-form button:hover {
+  background-color: #0056b3;
+}
+
+.auth-form p {
+  margin-top: 1.5rem;
+  color: #007bff;
+}
+
+.auth-form span {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.auth-form span:hover {
+  text-decoration: underline;
+}

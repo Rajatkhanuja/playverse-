@@ -1,0 +1,58 @@
+/* Layout.css */
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .navbar {
+    background-color: aqua;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .main-content {
+    display: flex;
+    flex: 1;
+  }
+  
+  .sidebar {
+    background-color: aqua;
+    color: #fff;
+    width: 200px;
+    padding: 10px;
+  }
+  
+  .sidebar-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #11ec11;
+    text-decoration: none;
+  }
+  
+  .sidebar-option img {
+    margin-right: 10px;
+  }
+  
+  
+  .children {
+    flex: 1;
+    padding: 20px;
+    background-color: #c81b1b;
+    overflow-y: auto;
+  }
+  
+  .logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .profile {
+    height: 40px;
+    border-radius: 50%;
+    margin-left: auto;
+  }
+  
